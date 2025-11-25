@@ -18,9 +18,8 @@ This board is sponsored by [LCPU](https://github.com/lcpu-club).
 ```bash
 git clone https://github.com/KawaiiNetworks/vyos-bpi-r4
 cd vyos-bpi-r4
-git checkout bpi-r4-6.17
 
-docker run -it --privileged --sysctl net.ipv6.conf.lo.disable_ipv6=0 -v $(pwd):/vyos -w /vyos ghcr.io/kawaiinetworks/vyos-bpi-r4:builder bash
+docker run -it --privileged --sysctl net.ipv6.conf.lo.disable_ipv6=0 --dns 8.8.8.8 -v $(pwd):/vyos -w /vyos ghcr.io/kawaiinetworks/vyos-bpi-r4:builder bash
 ```
 
 In the container (we assume that the current user is not root):
@@ -41,6 +40,7 @@ git clone https://github.com/vyos/vyos-build
 Note: Many steps in this script are excerpted from huihuimoe/vyos-arm64-build GitHub workflows.
 
 ```bash
+cd $PROJECT_ROOT
 bash scripts/patch-and-build-vyos-1x.sh
 ```
 
