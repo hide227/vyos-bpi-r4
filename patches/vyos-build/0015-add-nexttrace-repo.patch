@@ -9,7 +9,7 @@ index 9ed68bbb..625858bc 100644
 +
 +[additional_repositories.nexttrace]
 +  architecture = "arm64"
-+  url = "https://github.com/nxtrace/nexttrace-debs/releases/latest/download"
++  url = "https://github.com/nxtrace/nexttrace-debs/releases/download/v1.5.0-rc"
 +  distribution = "./"
 +  components = ""
 +  no_source = true
